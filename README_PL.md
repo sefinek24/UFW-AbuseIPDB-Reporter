@@ -18,7 +18,7 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
   - [🔍 Sprawdzenie statusu usługi](#sprawdzenie-statusu-uslugi)
   - [📄 Przykładowe zgłoszenie](#przykladowe-zgloszenie)
 - [🤝 Rozwój](#rozwoj)
-- [🔑 Licencja MIT](#licencja-mit)
+- [🔑 Licencja MIT](#licencja)
 
 ## ⚙️ Jak to dokładniej działa?<div id="jak-to-dziala"></div>
 1. **Monitorowanie logów UFW:** Narzędzie stale śledzi logi generowane przez firewall UFW, poszukując prób nieautoryzowanego dostępu lub innych podejrzanych działań.
@@ -99,5 +99,5 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
 ## 🤝 Rozwój<div id="rozwoj"></div>
 Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórz nowy [Pull request](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/pulls). Z pewnością to docenię!
 
-## 🔑 Licencja MIT<div id="licencja-mit"></div>
-Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone. Zobacz plik [LICENSE](LICENSE), aby uzyskać więcej informacji.
+## 🔑 Licencja CC BY-NC-SA<div id="licencja"></div>
+Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone. Zobacz plik [LICENSE](LICENSE), aby dowiedzieć się więcej.
