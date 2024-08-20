@@ -9,9 +9,9 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 
 - [⚙️ Jak to dokładniej działa?](#jak-to-dziala)
 - [📋 Wymagania](#wymagania)
-- [🛠️ Instalacja wymaganych pakietów](#instalacja-wymaganych-pakietow)
-  - [🌍 Wykonaj aktualizacje repozytoriów i oprogramowania](#wykonaj-aktualizacje-repozytoriow-i-oprogramowania)
-  - [🌌 Zainstaluj wymagane zależności](#zainstaluj-wymagane-zaleznosci)
+  - [🛠️ Instalacja wymaganych pakietów](#instalacja-wymaganych-pakietow)
+    - [🌍 Wykonaj aktualizacje repozytoriów i oprogramowania](#wykonaj-aktualizacje-repozytoriow-i-oprogramowania)
+    - [🌌 Zainstaluj wymagane zależności](#zainstaluj-wymagane-zaleznosci)
   - [🧪 Testowane systemy operacyjne](#testowane-systemy-operacyjne)
 - [📥 Instalacja](#instalacja)
 - [🖥️ Użycie](#uzycie)
@@ -37,13 +37,13 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 - **Połączenie z Internetem:** Hm, wydaje, mi się, że jest to oczywiste, prawda?
 
 
-## 🛠️ Instalacja wymaganych pakietów<div id="instalacja-wymaganych-pakietow"></div>
-### 🌍 Wykonaj aktualizacje repozytoriów i oprogramowania (wysoko zalecane)<div id="wykonaj-aktualizacje-repozytoriow-i-oprogramowania"></div>
+### 🛠️ Instalacja wymaganych pakietów<div id="instalacja-wymaganych-pakietow"></div>
+#### 🌍 Wykonaj aktualizacje repozytoriów i oprogramowania (wysoko zalecane)<div id="wykonaj-aktualizacje-repozytoriow-i-oprogramowania"></div>
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 🌌 Zainstaluj wymagane zależności<div id="zainstaluj-wymagane-zaleznosci"></div>
+#### 🌌 Zainstaluj wymagane zależności<div id="zainstaluj-wymagane-zaleznosci"></div>
 ```bash
 sudo apt install -y curl jq openssl ufw
 ```
