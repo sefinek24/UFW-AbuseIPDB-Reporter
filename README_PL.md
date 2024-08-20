@@ -13,7 +13,7 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
   - [Wykonaj aktualizacje repozytoriów i oprogramowania (wysoko zalecane)](#wykonaj-aktualizacje-repozytoriow)
   - [Zainstaluj wymagane zależności](#zainstaluj-wymagane-zaleznosci)
 - [🧪 Testowane systemy operacyjne](#testowane-systemy-operacyjne)
-- [🚀 Instalacja](#instalacja)
+- [📥 Instalacja](#instalacja)
 - [🖥️ Użycie](#uzycie)
 - [🔍 Sprawdzenie statusu usługi](#sprawdzenie-statusu-uslugi)
 - [📄 Przykładowe zgłoszenie](#przykladowe-zgloszenie)
@@ -52,7 +52,7 @@ sudo apt install -y curl jq openssl ufw
 
 Jeśli dystrybucja, na której uruchomiłeś narzędzie, nie znajduje się na tej liście, a skrypt działa poprawnie, utwórz nowy Issue. Dodam jej nazwę tu.
 
-## 🚀 Instalacja<div id="instalacja"></div>
+## 📥 Instalacja<div id="instalacja"></div>
 Aby zainstalować to narzędzie, wykonaj poniższą komendę w terminalu (`sudo` jest wymagane):
 ```bash
 sudo bash -c "$(curl -s https://raw.githubusercontent.com/sefinek24/UFW-AbuseIPDB-Reporter/main/install.sh)"
