@@ -17,7 +17,7 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 - [🖥️ Użycie](#uzycie)
   - [🔍 Sprawdzenie statusu usługi](#sprawdzenie-statusu-uslugi)
   - [📄 Przykładowe zgłoszenie](#przykladowe-zgloszenie)
-- [🤝 Rozwój](#pull-requesty)
+- [🤝 Rozwój](#rozwoj)
 - [🔑 Licencja MIT](#licencja-mit)
 
 ## ⚙️ Jak to dokładniej działa?<div id="jak-to-dziala"></div>
@@ -69,7 +69,7 @@ Narzędzie nie wymaga dodatkowych działań użytkownika po instalacji. Warto je
 Jeśli jednak chcesz mieć pewność, że wszystko działa prawidłowo, możesz pójść sobie wypić piwo. Po skończonym alkoholizowaniu się sprawdź, czy jest wszystko ok.
 
 Serwery otwarte na świat są nieustannie skanowane przez boty, które zazwyczaj szukają podatności lub jakichkolwiek innych luk w zabezpieczeniach.
-Nie zdziw się więc, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
+Więc nie zdziw się, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
 
 ### 🔍 Sprawdzenie statusu usługi<div id="sprawdzenie-statusu-uslugi"></div>
 Jeśli narzędzie zostało zainstalowane jako usługa systemowa, możesz sprawdzić jej status za pomocą poniższej komendy:
@@ -96,7 +96,7 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
 ```
 
 
-## 🤝 Rozwój<div id="pull-requesty"></div>
+## 🤝 Rozwój<div id="rozwoj"></div>
 Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórz nowy [Pull request](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/pulls). Z pewnością to docenię!
 
 ## 🔑 Licencja MIT<div id="licencja-mit"></div>
