@@ -51,7 +51,7 @@ sudo apt install -y curl jq openssl ufw
 ### 🧪 Tested operating systems<div id="tested-operating-systems"></div>
 - Ubuntu Server 20.04/22.04
 
-If the distribution you're running the tool on isn't listed here and the script works correctly, please create a new Issue. I'll add its name here.
+If the distribution you're running the tool on isn't listed here and the script works correctly, please create a new [Issue](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/issues). I'll add its name here.
 
 
 ## 📥 Installation<div id="installation"></div>
