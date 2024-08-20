@@ -90,7 +90,7 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
 ```
 
 ## 🤝 Pull requesty<div id="pull-requesty"></div>
-Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórzy nowy Pull request. Z pewnością to docenię!
+Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórz nowy [Pull request](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/pulls). Z pewnością to docenię!
 
 ## 🔑 Licencja MIT<div id="licencja-mit"></div>
 Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone. Zobacz plik [LICENSE](LICENSE), aby uzyskać więcej informacji.
