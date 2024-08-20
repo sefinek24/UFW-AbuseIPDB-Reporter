@@ -93,5 +93,4 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
 Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórzy nowy Pull request. Z pewnością to docenię!
 
 ## 🔑 Licencja MIT<div id="licencja-mit"></div>
-Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone.  
-Zobacz plik [LICENSE](LICENSE), aby uzyskać więcej informacji.
+Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone. Zobacz plik [LICENSE](LICENSE), aby uzyskać więcej informacji.
