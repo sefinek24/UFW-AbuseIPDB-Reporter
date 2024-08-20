@@ -201,10 +201,10 @@ EOL
         exit 1
     fi
 elif [[ "$add_service" =~ ^(no|n)$ ]]; then
-    echo "INFO: reporter.sh will not be added as a service."
+    echo "INFO: reporter.sh will not be added as a service..."
     echo "INFO: Running reporter.sh directly. Press ^C to stop the script."
     if "$script_path"; then
-        echo "INFO: reporter.sh executed successfully."
+        echo "INFO: reporter.sh executed successfully!"
     else
         echo "ERROR: Failed to execute reporter.sh."
         exit 1
