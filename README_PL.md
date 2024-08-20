@@ -20,6 +20,8 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 - [🤝 Rozwój](#rozwoj)
 - [🔑 Licencja MIT](#licencja)
 
+Zobacz również to: [sefinek24/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefinek24/Node-Cloudflare-WAF-AbuseIPDB)
+
 ## ⚙️ Jak to dokładniej działa?<div id="jak-to-dziala"></div>
 1. **Monitorowanie logów UFW:** Narzędzie stale śledzi logi generowane przez firewall UFW, poszukując prób nieautoryzowanego dostępu lub innych podejrzanych działań.
 2. **Analiza zgłoszonego adresu:** Po zidentyfikowaniu podejrzanego adresu IP, skrypt sprawdza, czy adres ten został już wcześniej zgłoszony.
