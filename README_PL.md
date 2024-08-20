@@ -28,7 +28,7 @@ Pamiętaj! Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego r
 - **System operacyjny:** Linux z zainstalowanym i skonfigurowanym firewallem UFW.
 - **Konto AbuseIPDB:** Wymagane jest konto w serwisie AbuseIPDB [z ważnym tokenem API](https://www.abuseipdb.com/account/api). Token API jest niezbędny.
 - **Zainstalowane pakiety:**
-  - `wget` lub `curl`: Jedno z tych narzędzi jest wymagane do pobrania skryptu instalacyjnego z repozytorium GitHub oraz do wysyłania zapytań do API AbuseIPDB.
+  - `wget` lub `curl`: Jedno z tych narzędzi jest wymagane do pobrania [skryptu instalacyjnego](install.sh) z repozytorium GitHub oraz do wysyłania zapytań do API AbuseIPDB.
   - `jq`: Narzędzie do przetwarzania i parsowania danych w formacie JSON, zwracanych przez API AbuseIPDB.
   - `openssl`: Używane do kodowania i dekodowania tokena API, aby zabezpieczyć dane uwierzytelniające.
   - `awk`, `grep`, `sed`: Standardowe narzędzia Unixowe wykorzystywane do przetwarzania tekstu i analizy logów.
