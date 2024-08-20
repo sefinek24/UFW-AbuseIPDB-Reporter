@@ -71,7 +71,7 @@ invoking_user=$(logname)
 
 # Check if the service already exists
 if systemctl list-unit-files | grep -q '^abuseipdb-ufw.service'; then
-    echo "WARNING: abuseipdb-ufw.service is already installed"
+    echo "WARNING: abuseipdb-ufw.service is already installed!"
     read -rp "> Do you want to remove the existing service? [Yes/no]: " remove_existing
 
     remove_existing=$(echo "$remove_existing" | tr '[:upper:]' '[:lower:]')
