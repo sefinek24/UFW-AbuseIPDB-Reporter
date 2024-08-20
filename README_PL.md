@@ -11,7 +11,7 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 - [📋 Wymagania](#wymagania)
 - [🛠️ Instalacja wymaganych pakietów](#instalacja-wymaganych-pakietow)
   - [🌍 Wykonaj aktualizacje repozytoriów i oprogramowania](#wykonaj-aktualizacje-repozytoriow-i-oprogramowania)
-  - [Zainstaluj wymagane zależności](#zainstaluj-wymagane-zaleznosci)
+  - [🌌 Zainstaluj wymagane zależności](#zainstaluj-wymagane-zaleznosci)
   - [🧪 Testowane systemy operacyjne](#testowane-systemy-operacyjne)
 - [📥 Instalacja](#instalacja)
 - [🖥️ Użycie](#uzycie)
