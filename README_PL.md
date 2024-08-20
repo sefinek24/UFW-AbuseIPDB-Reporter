@@ -33,7 +33,7 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
   - `wget` lub `curl`: Jedno z tych narzędzi jest wymagane do pobrania [skryptu instalacyjnego](install.sh) z repozytorium GitHub oraz do wysyłania zapytań do API AbuseIPDB.
   - `jq`: Narzędzie do przetwarzania i parsowania danych w formacie JSON, zwracanych przez API AbuseIPDB.
   - `openssl`: Używane do kodowania i dekodowania tokena API, aby zabezpieczyć dane uwierzytelniające.
-  - `awk`, `grep`, `sed`: Standardowe narzędzia Unixowe wykorzystywane do przetwarzania tekstu i analizy logów.
+  - `tail`, `awk`, `grep`, `sed`: Standardowe narzędzia Unixowe wykorzystywane do przetwarzania tekstu i analizy logów.
 - **Połączenie z Internetem:** Hm, wydaje, mi się, że jest to oczywiste, prawda?
 
 
