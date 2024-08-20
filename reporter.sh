@@ -2,7 +2,7 @@
 
 LOG_FILE="/var/log/ufw.log"
 ENCODED_API_KEY_FILE="./.abuseipdb_token"
-REPORTED_IPS_FILE="/tmp/reported_ips.txt"
+REPORTED_IPS_FILE="/tmp/ufw-abuseipdb-reporter.cache"
 REPORT_INTERVAL=18000 # 5h (seconds)
 
 declare -A reported_ips
