@@ -2,7 +2,10 @@
 Narzędzie, które analizuje logi firewalla UFW i zgłasza złośliwe adresy IP do bazy danych [AbuseIPDB](https://www.abuseipdb.com).
 Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium, utwórz najpierw jego publiczny fork.
 
-[[Polish](README_PL.md)] [[English](README.md)]
+<div align="center">
+  [<a href="README.md">English</a>]
+  [<a href="README_PL.md">Polish</a>]
+</div>
 
 - [⚙️ Jak to dokładniej działa?](#jak-to-dziala)
 - [📋 Wymagania](#wymagania)
