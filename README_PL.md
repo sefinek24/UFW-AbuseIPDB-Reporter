@@ -68,7 +68,8 @@ Po pomyślnej instalacji skrypt będzie działać cały czas w tle, monitorując
 Narzędzie nie wymaga dodatkowych działań użytkownika po instalacji. Warto jednak od czasu do czasu sprawdzić jego działanie oraz aktualizować skrypt na bieżąco (wywołując polecenie instalacyjne).
 Jeśli jednak chcesz mieć pewność, że wszystko działa prawidłowo, możesz pójść sobie wypić piwo. Po skończonym alkoholizowaniu się sprawdź, czy jest wszystko ok.
 
-Serwery otwarte na świat są nieustannie skanowane przez boty, które zazwyczaj szukają podatności lub jakichkolwiek innych luk w zabezpieczeniach. Nie zdziw się więc, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
+Serwery otwarte na świat są nieustannie skanowane przez boty, które zazwyczaj szukają podatności lub jakichkolwiek innych luk w zabezpieczeniach.
+Nie zdziw się więc, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
 
 ### 🔍 Sprawdzenie statusu usługi<div id="sprawdzenie-statusu-uslugi"></div>
 Jeśli narzędzie zostało zainstalowane jako usługa systemowa, możesz sprawdzić jej status za pomocą poniższej komendy:
