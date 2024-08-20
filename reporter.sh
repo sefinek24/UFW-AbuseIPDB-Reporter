@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="/var/log/ufw.log"
-ENCODED_API_KEY_FILE="./encoded_token.txt"
+ENCODED_API_KEY_FILE="./.abuseipdb_token"
 REPORTED_IPS_FILE="/tmp/reported_ips.txt"
 REPORT_INTERVAL=18000 # 5h (seconds)
 
