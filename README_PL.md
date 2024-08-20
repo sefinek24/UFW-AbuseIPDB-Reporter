@@ -48,7 +48,7 @@ sudo apt install -y curl jq openssl ufw
 ### 🧪 Testowane systemy operacyjne<div id="testowane-systemy-operacyjne"></div>
 - Ubuntu Server 20.04/22.04
 
-Jeśli dystrybucja, na której uruchomiłeś skrypt, nie znajduje się na tej liście, a skrypt działa poprawnie, utwórz nowy Issue. Dodam jej nazwę tu.
+Jeśli dystrybucja, na której uruchomiłeś narzędzie, nie znajduje się na tej liście, a skrypt działa poprawnie, utwórz nowy Issue. Dodam jej nazwę tu.
 
 ## 🚀 Instalacja<div id="instalacja"></div>
 Aby zainstalować to narzędzie, wykonaj poniższą komendę w terminalu (`sudo` jest wymagane):
