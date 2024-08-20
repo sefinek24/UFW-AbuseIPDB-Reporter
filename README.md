@@ -60,7 +60,7 @@ To install this tool, run the following command in the terminal (`sudo` is requi
 sudo bash -c "$(curl -s https://raw.githubusercontent.com/sefinek24/UFW-AbuseIPDB-Reporter/main/install.sh)"
 ```
 
-The installation script will automatically download and configure the tool on your server. During installation, you will be asked to provide an AbuseIPDB API token.
+The installation script will automatically download and configure the tool on your server. During installation, you will be asked to provide an [AbuseIPDB API token](https://www.abuseipdb.com/account/api).
 
 
 ## 🖥️ Usage<div id="usage"></div>
