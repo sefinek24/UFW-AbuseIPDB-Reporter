@@ -15,8 +15,8 @@ Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium
 - [🧪 Testowane systemy operacyjne](#testowane-systemy-operacyjne)
 - [📥 Instalacja](#instalacja)
 - [🖥️ Użycie](#uzycie)
-- [🔍 Sprawdzenie statusu usługi](#sprawdzenie-statusu-uslugi)
-- [📄 Przykładowe zgłoszenie](#przykladowe-zgloszenie)
+  - [🔍 Sprawdzenie statusu usługi](#sprawdzenie-statusu-uslugi)
+  - [📄 Przykładowe zgłoszenie](#przykladowe-zgloszenie)
 - [🤝 Pull requesty](#pull-requesty)
 - [🔑 Licencja MIT](#licencja-mit)
 
@@ -67,7 +67,7 @@ Jeśli jednak chcesz mieć pewność, że wszystko działa prawidłowo, możesz 
 
 Serwery otwarte na świat są nieustannie skanowane przez boty, które zazwyczaj szukają podatności lub jakichkolwiek innych luk w zabezpieczeniach. Nie zdziw się więc, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
 
-## 🔍 Sprawdzenie statusu usługi<div id="sprawdzenie-statusu-uslugi"></div>
+### 🔍 Sprawdzenie statusu usługi<div id="sprawdzenie-statusu-uslugi"></div>
 Jeśli narzędzie zostało zainstalowane jako usługa systemowa, możesz sprawdzić jej status za pomocą poniższej komendy:
 ```bash
 sudo systemctl status abuseipdb-ufw.service
@@ -78,7 +78,7 @@ Aby zobaczyć bieżące logi generowane przez proces, użyj polecenia:
 journalctl -u abuseipdb-ufw.service -f
 ```
 
-## 📄 Przykładowe zgłoszenie<div id="przykladowe-zgloszenie"></div>
+### 📄 Przykładowe zgłoszenie<div id="przykladowe-zgloszenie"></div>
 ```
 Blocked by UFW (TCP on port 848).
 Source port: 42764
