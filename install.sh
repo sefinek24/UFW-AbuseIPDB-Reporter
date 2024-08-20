@@ -133,7 +133,7 @@ fi
 
 # Encode the API token
 token_file="$install_dir/.abuseipdb_token"
-echo "INFO: Encoding data..."
+echo "INFO: Encoding data (file $token_file)..."
 if ! echo -n "$api_key" | openssl enc -base64 | sudo tee "$token_file" >/dev/null; then
     echo "ERROR: Something went wrong. Failed to encode API token."
     exit 1
