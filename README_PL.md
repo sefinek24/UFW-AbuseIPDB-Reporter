@@ -1,7 +1,6 @@
 # 🛡️ UFW AbuseIPDB Reporter
 Narzędzie, które analizuje logi firewalla UFW i zgłasza złośliwe adresy IP do bazy danych [AbuseIPDB](https://www.abuseipdb.com).
-
-Pamiętaj! Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium, utwórz najpierw jego publiczny fork.
+Jeśli planujesz wprowadzić zmiany w którymkolwiek z plików tego repozytorium, utwórz najpierw jego publiczny fork.
 
 [[Polish](README_PL.md)] | [[English](README.md)]
 
