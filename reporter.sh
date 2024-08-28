@@ -135,7 +135,7 @@ determine_categories() {
             case "$dpt" in
                 53) echo "14,1,2" ;;  # Port Scan | DNS Compromise | DNS Poisoning
                 123) echo "14,17" ;;  # Port Scan | Spoofing
-                *) echo "14,4" ;;  # Port Scan | DDoS Attack
+                *) echo "14" ;;  # Port Scan
             esac
             ;;
         *) echo "14,15" ;;  # Port Scan | Hacking
