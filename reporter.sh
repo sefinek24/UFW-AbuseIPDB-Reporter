@@ -2,7 +2,7 @@
 
 ###
 # https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
-# Version v1.0.0 from 06.09.2024 [DD.MM.YYYY]
+# Version v1.0.1 from 14.09.2024 [DD.MM.YYYY]
 ##
 
 LOG_FILE="/var/log/ufw.log"
@@ -209,11 +209,6 @@ process_log_line() {
 }
 
 load_reported_ips
-
-if ! command -v jq &> /dev/null; then
-    log "ERROR" "jq is not installed. Please install jq to run this script."
-    exit 1
-fi
 
 log "INFO" "Starting to monitor $LOG_FILE"
 
