@@ -27,7 +27,7 @@ EOF
 download_file() {
     local url="$1"
     local output="$2"
-    local user_agent="UFW-AbuseIPDB-Reporter/1.0.0 (+https://github.com/sefinek24/UFW-AbuseIPDB-Reporter)"
+    local user_agent="UFW-AbuseIPDB-Reporter/1.0.1 (+https://github.com/sefinek24/UFW-AbuseIPDB-Reporter)"
 
     if command -v wget >/dev/null 2>&1; then
         echo "INFO: Using wget to download the file. Please wait..."
