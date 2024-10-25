@@ -8,7 +8,7 @@
 LOG_FILE="/var/log/ufw.log"
 ENCODED_API_KEY_FILE="./.abuseipdb_token"
 REPORTED_IPS_FILE="/tmp/ufw-abuseipdb-reporter.cache"
-REPORT_INTERVAL=43200 # 12h (seconds)
+REPORT_INTERVAL=43200 # 12h (in seconds)
 
 declare -A reported_ips
 
@@ -144,19 +144,19 @@ determine_categories() {
     local proto="$1"
     local dpt="$2"
 
-    # See https://www.abuseipdb.com/categories for more
+    # See: https://www.abuseipdb.com/categories
     case "$proto" in
         "TCP")
             case "$dpt" in
                 22) echo "14,22,18" ;;  # Port Scan | SSH | Brute-Force
                 80 | 443 | 8080) echo "14,21" ;;  # Port Scan | Web App Attack
-                25) echo "11" ;;  # Email Spam
-                21) echo "5,18" ;;  # FTP Brute-Force | Brute-Force
-                53) echo "1,2" ;;  # DNS Compromise | DNS Poisoning
+                25) echo "14,11" ;;  # Port Scan | Email Spam
+                21) echo "14,5,18" ;;  # Port Scan | FTP Brute-Force | Brute-Force
+                53) echo "14,1,2" ;;  # Port Scan | DNS Compromise | DNS Poisoning
                 23 | 3389) echo "14,15,18" ;;  # Port Scan | Hacking | Brute-Force
-                3306) echo "16" ;;  # SQL Injection
+                3306) echo "14,16" ;;  # Port Scan | SQL Injection
                 6666 | 6667 | 6668 | 6669) echo "14,8" ;;  # Port Scan | Fraud VoIP
-                9999) echo "6" ;;  # Ping of Death
+                9999) echo "14,6" ;;  # Port Scan | Ping of Death
                 *) echo "14" ;;  # Port Scan
             esac
             ;;
@@ -167,7 +167,7 @@ determine_categories() {
                 *) echo "14" ;;  # Port Scan
             esac
             ;;
-        *) echo "14,15" ;;  # Port Scan | Hacking
+        *) echo "14" ;;  # Port Scan
     esac
 }
 
