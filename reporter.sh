@@ -14,7 +14,7 @@ declare -A reported_ips
 log() {
     local level="$1"
     local message="$2"
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] [$level] $message"
+    echo "[$level] $message"
 }
 
 # Check if the API key file exists and decode it
