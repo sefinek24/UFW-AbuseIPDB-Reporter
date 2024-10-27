@@ -114,7 +114,7 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter"
     abuse_confidence_score=$(echo "$res" | jq -r '.data.abuseConfidenceScore')
 
     if [[ "$abuse_confidence_score" =~ ^[0-9]+$ ]]; then
-        log "INFO" "Successfully reported IP $ip to AbuseIPDB with score: $abuse_confidence_score"
+        log "INFO" "Successfully reported IP $ip to AbuseIPDB (score $abuse_confidence_score)"
         return 0
     else
         log "ERROR" "Failed to report IP $ip to AbuseIPDB: $res"
