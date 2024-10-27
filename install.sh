@@ -190,7 +190,6 @@ EOF
     fi
 
     sudo systemctl daemon-reload
-    sudo systemctl restart abuseipdb-ufw.service
 
     if sudo systemctl enable abuseipdb-ufw.service && sudo systemctl start abuseipdb-ufw.service; then
         echo "INFO: Attempting to start the abuseipdb-ufw.service..."
