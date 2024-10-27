@@ -89,7 +89,7 @@ if systemctl list-unit-files | grep -q '^abuseipdb-ufw.service'; then
     if [[ "$remove_existing" =~ ^(yes|y)$ ]]; then
         remove_service
     else
-        echo -e "INFO: Existing service will not be removed.\n"
+        echo -e "INFO: Existing service will not be removed\n"
     fi
 fi
 
@@ -188,7 +188,9 @@ EOF
         echo "ERROR: Failed to create service file. Please check your permissions!"
         exit 1
     fi
+
     sudo systemctl daemon-reload
+    sudo systemctl restart abuseipdb-ufw.service
 
     if sudo systemctl enable abuseipdb-ufw.service && sudo systemctl start abuseipdb-ufw.service; then
         echo "INFO: Attempting to start the abuseipdb-ufw.service..."
