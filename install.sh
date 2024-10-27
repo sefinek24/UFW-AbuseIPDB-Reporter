@@ -1,33 +1,44 @@
 #!/bin/bash
 
+###
+# https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
+##
+
+VERSION="1.0.2"
+DATE="27.10.2024"
+REPO="https://github.com/sefinek24/UFW-AbuseIPDB-Reporter"
+
 cat << "EOF"
+     _      _                            ___   ____    ____    ____
+    / \    | |__    _   _   ___    ___  |_ _| |  _ \  |  _ \  | __ )
+   / _ \   | '_ \  | | | | / __|  / _ \  | |  | |_) | | | | | |  _ \
+  / ___ \  | |_) | | |_| | \__ \ |  __/  | |  |  __/  | |_| | | |_) |
+ /_/   \_\_|_.__/ _ \__,_| |___/  \___| |___| |_|     |____/  |____/
 
-    _      _                            ___   ____    ____    ____
-   / \    | |__    _   _   ___    ___  |_ _| |  _ \  |  _ \  | __ )
-  / _ \   | '_ \  | | | | / __|  / _ \  | |  | |_) | | | | | |  _ \
- / ___ \  | |_) | | |_| | \__ \ |  __/  | |  |  __/  | |_| | | |_) |
-/_/   \_\_|_.__/ _ \__,_| |___/  \___| |___| |_|     |____/  |____/
-
-        (_)_ __ | |_ ___  __ _ _ __ __ _| |_(_) ___  _ __
-        | | '_ \| __/ _ \/ _` | '__/ _` | __| |/ _ \| '_ \
-        | | | | | ||  __/ (_| | | | (_| | |_| | (_) | | | |
-        |_|_| |_|\__\___|\__, |_|  \__,_|\__|_|\___/|_| |_|
-                         |___/
-
-
-                    >> by https://sefinek.net <<
-
-This installer configures the UFW-AbuseIPDB-Reporter tool, which analyzes
-UFW firewall logs and reports malicious IP addresses to the AbuseIPDB database.
-
+         (_)_ __ | |_ ___  __ _ _ __ __ _| |_(_) ___  _ __
+         | | '_ \| __/ _ \/ _` | '__/ _` | __| |/ _ \| '_ \
+         | | | | | ||  __/ (_| | | | (_| | |_| | (_) | | | |
+         |_|_| |_|\__\___|\__, |_|  \__,_|\__|_|\___/|_| |_|
+                          |___/
 
 EOF
+
+cat <<EOF
+     >> Made by sefinek.net || Version: $VERSION [$DATE] <<
+
+This installer configures the UFW-AbuseIPDB-Reporter, a tool that analyzes UFW firewall logs
+and reports malicious IP addresses to the AbuseIPDB database.
+
+=======================================================================================================
+
+EOF
+
 
 # Function to download a file using either wget or curl
 download_file() {
     local url="$1"
     local output="$2"
-    local user_agent="UFW-AbuseIPDB-Reporter/1.0.1 (+https://github.com/sefinek24/UFW-AbuseIPDB-Reporter)"
+    local user_agent="UFW-AbuseIPDB-Reporter/$VERSION (+$REPO)"
 
     if command -v wget >/dev/null 2>&1; then
         echo "INFO: Using wget to download the file. Please wait..."
@@ -48,7 +59,7 @@ remove_service() {
     sudo systemctl disable abuseipdb-ufw.service
     sudo rm /etc/systemd/system/abuseipdb-ufw.service
     sudo systemctl daemon-reload
-    sudo systemctl reset-failed
+    # sudo systemctl reset-failed
     echo
 }
 
@@ -71,15 +82,14 @@ invoking_user=$(logname)
 
 # Check if the service already exists
 if systemctl list-unit-files | grep -q '^abuseipdb-ufw.service'; then
-    echo "WARNING: abuseipdb-ufw.service is already installed!"
+    echo "WARNING: abuseipdb-ufw.service is already installed! If you plan to update or reinstall, choose 'Yes'."
     read -rp "> Do you want to remove the existing service? [Yes/no]: " remove_existing
 
     remove_existing=$(echo "$remove_existing" | tr '[:upper:]' '[:lower:]')
     if [[ "$remove_existing" =~ ^(yes|y)$ ]]; then
         remove_service
     else
-        echo "INFO: Existing service will not be removed. Exiting..."
-        exit 0
+        echo -e "INFO: Existing service will not be removed.\n"
     fi
 fi
 
@@ -156,11 +166,11 @@ add_service=$(echo "$add_service" | tr '[:upper:]' '[:lower:]')
 if [[ "$add_service" =~ ^(yes|y)$ ]]; then
     service_file="/etc/systemd/system/abuseipdb-ufw.service"
     echo "INFO: Setting up reporter.sh as a service"
-    if ! sudo bash -c "cat > $service_file" <<EOL
+if ! sudo bash -c "cat > $service_file" <<-EOF
 [Unit]
 Description=UFW AbuseIPDB Reporter
 After=network.target
-Documentation=https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
+Documentation=$REPO
 
 [Service]
 Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -173,7 +183,7 @@ StandardError=journal+console
 
 [Install]
 WantedBy=multi-user.target
-EOL
+EOF
     then
         echo "ERROR: Failed to create service file. Please check your permissions!"
         exit 1
