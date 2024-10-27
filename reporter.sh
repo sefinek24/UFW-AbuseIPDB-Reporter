@@ -192,7 +192,7 @@ process_log_line() {
         tos=$(echo "$line" | grep -oP 'TOS=\K[^\s]+')
 
         if is_ip_reported_recently "$src_ip"; then
-            log "INFO" "IP $src_ip ($proto) was reported recently. Skipping..."
+            log "INFO" "IP $src_ip ($proto) was reported recently"
             return
         fi
 
