@@ -103,5 +103,5 @@ https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
 ## 🤝 Rozwój<div id="rozwoj"></div>
 Jeśli chcesz przyczynić się do rozwoju tego projektu, śmiało stwórz nowy [Pull request](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/pulls). Z pewnością to docenię!
 
-## 🔑 Licencja CC BY-NC-SA<div id="licencja"></div>
+## 🔑 Licencja GPL-3.0<div id="licencja"></div>
 Copyright 2024 © by [Sefinek](https://sefinek.net). Wszelkie prawa zastrzeżone. Zobacz plik [LICENSE](LICENSE), aby dowiedzieć się więcej.
