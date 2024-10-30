@@ -157,6 +157,11 @@ if ! sudo sed -i "s|^ENCODED_API_KEY_FILE=.*|ENCODED_API_KEY_FILE=\"$token_file\
 fi
 echo
 
+echo "INFO: Setting permissions (chmod 644) for the file /var/log/ufw.log"
+sudo chmod 644 /var/log/ufw.log
+echo
+
+
 # Prompt to add reporter.sh as a service
 read -rp "> Do you want to add reporter.sh as a service? [Yes/no]: " add_service
 
@@ -224,6 +229,7 @@ else
     echo "ERROR: Invalid input. Please enter Yes, No, y, or n."
     exit 1
 fi
+
 
 # Prompt to add the service to autostart
 echo
