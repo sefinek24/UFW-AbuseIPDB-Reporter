@@ -45,7 +45,7 @@ See also this: [sefinek24/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefi
 
 
 ## 🧪 Tested operating systems<div id="tested-operating-systems"></div>
-- Ubuntu Server 20.04/22.04
+- **Ubuntu Server:** 20.04 & 22.04
 
 If the distribution you're using to run the tool isn't listed here and the script works correctly, please create a new [Issue](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/issues). I'll add its name to the list.
 
