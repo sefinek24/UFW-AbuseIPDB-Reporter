@@ -59,7 +59,7 @@ sudo apt update && sudo apt upgrade -y
 
 ### 🌌 Install required dependencies<div id="install-required-dependencies"></div>
 ```bash
-sudo apt install -y curl jq openssl ufw
+sudo apt install -y ufw curl jq openssl
 ```
 
 ### ✅ Installation
