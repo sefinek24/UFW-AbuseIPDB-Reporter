@@ -8,7 +8,7 @@ A tool that analyzes UFW firewall logs and reports malicious IP addresses to the
 If you like this repository or find it useful, I would greatly appreciate it if you could give it a star ⭐. Thanks a lot!
 
 > [!IMPORTANT]
-> If you'd like to make changes to any files in this repository, please start by creating a public fork.
+> If you'd like to make changes to any files in this repository, please start by creating a [public fork](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/fork).
 
 - [⚙️ How does it work in detail?](#how-it-works)
 - [📋 Requirements](#requirements)
@@ -41,7 +41,6 @@ See also this: [sefinek24/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefi
   - `jq`: A tool for processing and parsing JSON data returned by the AbuseIPDB API.
   - `openssl`: Used to encode and decode the API token to secure authentication data.
   - `tail`, `awk`, `grep`, `sed`: Standard Unix tools used for text processing and log analysis.
-- **Internet connection:** Hm, I think it's obvious, right?
 
 
 ## 🧪 Tested operating systems<div id="tested-operating-systems"></div>
