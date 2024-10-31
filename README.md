@@ -1,6 +1,6 @@
 <div align="center">
   [<a href="README.md">English</a>]
-  [<a href="README_PL.md">Polish</a>]
+  [<a href="README_PL.md">Polski</a>]
 </div>
 
 # 🛡️ UFW AbuseIPDB Reporter
