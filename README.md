@@ -44,24 +44,25 @@ See also this: [sefinek24/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefi
 - **Internet connection:** Hm, I think it's obvious, right?
 
 
-### 🛠️ Installing required packages<div id="installing-required-packages"></div>
-#### 🌍 Perform repository and software updates (highly recommended)<div id="perform-repository-and-software-updates"></div>
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-#### 🌌 Install required dependencies<div id="install-required-dependencies"></div>
-```bash
-sudo apt install -y curl jq openssl ufw
-```
-
-### 🧪 Tested operating systems<div id="tested-operating-systems"></div>
+## 🧪 Tested operating systems<div id="tested-operating-systems"></div>
 - Ubuntu Server 20.04/22.04
 
 If the distribution you're using to run the tool isn't listed here and the script works correctly, please create a new [Issue](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/issues). I'll add its name to the list.
 
 
 ## 📥 Installation<div id="installation"></div>
+
+### 🌍 Perform repository and software updates (highly recommended)<div id="perform-repository-and-software-updates"></div>
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### 🌌 Install required dependencies<div id="install-required-dependencies"></div>
+```bash
+sudo apt install -y curl jq openssl ufw
+```
+
+#### Install
 To install this tool, run the following command in the terminal (`sudo` is required):
 ```bash
 sudo bash -c "$(curl -s https://raw.githubusercontent.com/sefinek24/UFW-AbuseIPDB-Reporter/main/install.sh)"
