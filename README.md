@@ -50,7 +50,7 @@ See also this: [sefinek24/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefi
 If the distribution you're using to run the tool isn't listed here and the script works correctly, please create a new [Issue](https://github.com/sefinek24/UFW-AbuseIPDB-Reporter/issues). I'll add its name to the list.
 
 
-## 📥 Installation<div id="installation"></div>
+## 📥 How to install?<div id="installation"></div>
 
 ### 🌍 Perform repository and software updates (highly recommended)<div id="perform-repository-and-software-updates"></div>
 ```bash
@@ -62,7 +62,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y curl jq openssl ufw
 ```
 
-#### Install
+### ✅ Installation
 To install this tool, run the following command in the terminal (`sudo` is required):
 ```bash
 sudo bash -c "$(curl -s https://raw.githubusercontent.com/sefinek24/UFW-AbuseIPDB-Reporter/main/install.sh)"
