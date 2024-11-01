@@ -1,12 +1,12 @@
 #!/bin/bash
 
 ###
-# https://github.com/sefinek24/UFW-AbuseIPDB-Reporter
+# https://github.com/sefinek/UFW-AbuseIPDB-Reporter
 ##
 
 VERSION="1.0.3"
 DATE="31.10.2024"
-REPO="https://github.com/sefinek24/UFW-AbuseIPDB-Reporter"
+REPO="https://github.com/sefinek/UFW-AbuseIPDB-Reporter"
 
 cat << "EOF"
      _      _                            ___   ____    ____    ____
@@ -102,7 +102,7 @@ fi
 echo "INFO: Installation directory created successfully"
 
 # Download the reporter.sh script
-GITHUB_URL="https://raw.githubusercontent.com/sefinek24/UFW-AbuseIPDB-Reporter/main/reporter.sh"
+GITHUB_URL="https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/reporter.sh"
 echo "INFO: Downloading reporter.sh from $GITHUB_URL"
 if ! download_file "$GITHUB_URL" "$script_path"; then
     echo "ERROR: Failed to download reporter.sh from GitHub! Please check your permissions!"
