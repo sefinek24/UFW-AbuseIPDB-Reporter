@@ -7,7 +7,7 @@
 Narzędzie, które analizuje logi firewalla UFW i zgłasza złośliwe adresy IP do bazy danych [AbuseIPDB](https://www.abuseipdb.com).
 Jeśli podoba Ci się to repozytorium lub uważasz je za przydatne, byłbym bardzo wdzięczny, gdybyś mógł dać mu gwiazdkę ⭐. Wielkie dzięki!
 
-Zobacz również to: [sefinek/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefinek/Node-Cloudflare-WAF-AbuseIPDB)
+Zobacz również to: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/Cloudflare-WAF-To-AbuseIPDB)
 
 > [!IMPORTANT]
 > Jeśli chcesz wprowadzić zmiany do jakichkolwiek plików w tym repozytorium, zacznij od utworzenia [publicznego forka](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/fork).

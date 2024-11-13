@@ -7,7 +7,7 @@
 A tool that analyzes UFW firewall logs and reports malicious IP addresses to the [AbuseIPDB](https://www.abuseipdb.com) database.
 If you like this repository or find it useful, I would greatly appreciate it if you could give it a star ⭐. Thanks a lot!
 
-See also this: [sefinek/Node-Cloudflare-WAF-AbuseIPDB](https://github.com/sefinek/Node-Cloudflare-WAF-AbuseIPDB)
+See also this: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/Cloudflare-WAF-To-AbuseIPDB)
 
 > [!IMPORTANT]
 > If you'd like to make changes to any files in this repository, please start by creating a [public fork](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/fork).
