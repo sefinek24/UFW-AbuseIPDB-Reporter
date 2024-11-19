@@ -158,25 +158,24 @@ echo -e "INFO: reporter.sh has been made executable.\n"
 
 # =========================== AbuseIPDB API token ===========================
 max_attempts=4
-attempts=0
-valid_token=false
 
-while [[ $attempts -lt $max_attempts ]]; do
+for ((attempts = 0; attempts < max_attempts; attempts++)); do
     read -rsp "$ Please enter your AbuseIPDB API token: " api_key
     echo
 
     if validate_token "$api_key"; then
         valid_token=true
         break
-    else
-        attempts_left=$((max_attempts - attempts - 1))
+    fi
+
+    attempts_left=$((max_attempts - attempts - 1))
+    if (( attempts_left > 0 )); then
         echo "WARN: Invalid API token format. Please enter an 80-character hexadecimal string. You have $attempts_left/$max_attempts attempts left."
-        ((attempts++))
     fi
 done
 
-if [[ "$valid_token" == "false" ]]; then
-    echo -e "\nFAIL: Maximum number of attempts reached. Installation aborted!"
+if [[ "${valid_token:-false}" != true ]]; then
+    echo "FAIL: Maximum number of attempts reached. Installation aborted!"
     exit 1
 fi
 
