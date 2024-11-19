@@ -172,7 +172,7 @@ determine_categories() {
 process_log_line() {
     local line="$1"
     if [[ "$line" == *"[UFW BLOCK]"* ]]; then
-        local timestamp src_ip proto spt dpt ttl len tos categories warsaw_time
+        local timestamp src_ip proto spt dpt ttl len tos categories
 
         timestamp=$(echo "$line" | awk '{print $1, $2, $3}')
         [[ -z "$timestamp" ]] && timestamp=$(date '+%Y-%m-%d %H:%M:%S')
