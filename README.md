@@ -52,7 +52,6 @@ Servers open to the world are constantly scanned by bots, usually looking for vu
 So don't be surprised if the next day, the number of reports to AbuseIPDB exceeds a thousand.
 
 ### 🔍 Checking service status
-If the tool was installed as a system service, you can check its status using the following command:
 ```bash
 sudo systemctl status abuseipdb-ufw.service
 ```

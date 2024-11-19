@@ -52,7 +52,6 @@ Serwery otwarte na świat są nieustannie skanowane przez boty, które zazwyczaj
 Więc nie zdziw się, jeśli następnego dnia liczba zgłoszeń na AbuseIPDB przekroczy tysiąc.
 
 ### 🔍 Sprawdzenie statusu usługi
-Jeśli narzędzie zostało zainstalowane jako usługa systemowa, możesz sprawdzić jej status za pomocą poniższej komendy:
 ```bash
 sudo systemctl status abuseipdb-ufw.service
 ```
