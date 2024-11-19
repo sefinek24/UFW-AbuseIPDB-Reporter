@@ -33,12 +33,12 @@ If the distribution you're using to run the tool isn't listed here and the scrip
 ## 📥 Installation
 ### curl
 ```bash
-curl -sL https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh)
 ```
 
 ### wget
 ```bash
-wget -qO- https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh | bash
+bash <(wget -qO- https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh)
 ```
 
 The installation script will automatically download and configure the tool on your machine. During the installation process, you will be prompted to provide an [AbuseIPDB API token](https://www.abuseipdb.com/account/api).
