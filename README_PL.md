@@ -4,20 +4,14 @@
 </div>
 
 # 🛡️ UFW AbuseIPDB Reporter
-Narzędzie, które analizuje logi firewalla UFW i zgłasza złośliwe adresy IP do bazy danych [AbuseIPDB](https://www.abuseipdb.com).
-Jeśli podoba Ci się to repozytorium lub uważasz je za przydatne, byłbym bardzo wdzięczny, gdybyś mógł dać mu gwiazdkę ⭐. Wielkie dzięki!
+Narzędzie zaprojektowane do analizowania dzienników zapory sieciowej UFW i zgłaszania złośliwych adresów IP do bazy danych [AbuseIPDB](https://www.abuseipdb.com).  
+Aby zapobiec nadmiarowemu zgłaszaniu tego samego adresu IP w krótkim okresie, narzędzie wykorzystuje tymczasowy plik pamięci podręcznej do śledzenia wcześniej zgłoszonych adresów IP.
 
+Jeśli podoba Ci się to repozytorium lub uważasz je za przydatne, byłbym bardzo wdzięczny, za przyznanie mu gwiazdki ⭐. Wielkie dzięki!  
 Zobacz również to: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/Cloudflare-WAF-To-AbuseIPDB)
 
 > [!IMPORTANT]
-> Jeśli chcesz wprowadzić zmiany do jakichkolwiek plików w tym repozytorium, zacznij od utworzenia [publicznego forka](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/fork).
-
-
-## ⚙️ Jak to dokładniej działa?
-1. **Monitorowanie logów UFW:** Narzędzie stale śledzi logi generowane przez firewall UFW, poszukując prób nieautoryzowanego dostępu lub innych podejrzanych działań.
-2. **Analiza zgłoszonego adresu:** Po zidentyfikowaniu podejrzanego adresu IP, skrypt sprawdza, czy adres ten został już wcześniej zgłoszony.
-3. **Zgłaszanie IP do AbuseIPDB:** Jeśli IP spełnia kryteria, adres jest zgłaszany do bazy danych AbuseIPDB wraz z informacjami o protokole, porcie źródłowym i docelowym itd.
-4. **Cache zgłoszonych IP:** Narzędzie przechowuje listę zgłoszonych IP w pliku tymczasowym, aby zapobiec wielokrotnemu zgłaszaniu tego samego adresu IP w krótkim czasie.
+> Jeśli chcesz wprowadzić zmiany do jakichkolwiek pliku z tego repozytorium, zacznij od utworzenia [publicznego forka](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/fork).
 
 
 ## 📋 Wymagania
@@ -31,30 +25,17 @@ Zobacz również to: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/se
 
 
 ## 🧪 Testowane systemy operacyjne
-- **Ubuntu Server:** 20.04 i 22.04
+- **Ubuntu Server:** 20.04 & 22.04
 
 Jeśli dystrybucja, której używasz do uruchomienia narzędzia, nie jest tutaj wymieniona, a skrypt działa poprawnie, utwórz nowy [Issue](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/issues). Dodam nazwę distra do listy.
 
 
-## 📥 Jak zainstalować?
-
-### 🌍 Wykonaj aktualizacje repozytoriów i oprogramowania (wysoko zalecane)
+## 📥 Instalacja
 ```bash
-sudo apt update && sudo apt upgrade -y
+curl -sL https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh | bash
 ```
 
-#### 🌌 Zainstaluj wymagane zależności
-```bash
-sudo apt install -y ufw curl jq openssl
-```
-
-### ✅ Instalacja
-Aby zainstalować to narzędzie, wykonaj poniższą komendę w terminalu (`sudo` jest wymagane):
-```bash
-sudo bash -c "$(curl -s https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/install.sh)"
-```
-
-Skrypt instalacyjny automatycznie pobierze i skonfiguruje narzędzie na Twoim serwerze. Podczas instalacji zostaniesz poproszony o podanie [tokena API z AbuseIPDB](https://www.abuseipdb.com/account/api).
+Skrypt instalacyjny automatycznie pobierze i skonfiguruje narzędzie na komputerze użytkownika. Podczas procesu instalacji zostaniesz poproszony o podanie [tokenu API AbuseIPDB](https://www.abuseipdb.com/account/api).
 
 
 ## 🖥️ Użycie
