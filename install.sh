@@ -175,7 +175,7 @@ while [[ $attempts -lt $max_attempts ]]; do
     fi
 done
 
-if [[ "$valid_token" = false ]]; then
+if [[ "$valid_token" == false ]]; then
     echo -e "\nFAIL: Maximum number of attempts reached. Installation aborted!"
     exit 1
 fi
