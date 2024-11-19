@@ -52,16 +52,6 @@ download_file() {
     fi
 }
 
-# Function to validate the API token format
-validate_token() {
-    local token="$1"
-    if [[ "$token" =~ ^[a-f0-9]{80}$ ]]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
 # Ask
 ask_user() {
     local question="$1"
@@ -158,12 +148,12 @@ echo -e "INFO: reporter.sh has been made executable.\n"
 
 # =========================== AbuseIPDB API token ===========================
 max_attempts=4
-
+valid_token=false
 for ((attempts = 0; attempts < max_attempts; attempts++)); do
     read -rsp "$ Please enter your AbuseIPDB API token: " api_key
     echo
 
-    if validate_token "$api_key"; then
+    if [[ "$api_key" =~ ^[a-f0-9]{80}$ ]]; then
         valid_token=true
         break
     fi
@@ -174,7 +164,7 @@ for ((attempts = 0; attempts < max_attempts; attempts++)); do
     fi
 done
 
-if [[ "${valid_token:-false}" != true ]]; then
+if [[ "$valid_token" != true ]]; then
     echo "FAIL: Maximum number of attempts reached. Installation aborted!"
     exit 1
 fi
@@ -247,12 +237,11 @@ EOF
         exit 1
     fi
 else
-    echo "INFO: reporter.sh will not be added as a service..."
-    echo "INFO: Running reporter.sh directly. Press ^C to stop the script."
+    echo -e "INFO: reporter.sh will not be added as a service. Running the script directly... Press ^C to stop.\n"
     if "$script_path"; then
-        echo "INFO: reporter.sh executed successfully!"
+        echo "INFO: reporter.sh executed successfully."
     else
-        echo "FAIL: Failed to execute reporter.sh."
+        echo "FAIL: Failed to execute reporter.sh!"
         exit 1
     fi
 fi

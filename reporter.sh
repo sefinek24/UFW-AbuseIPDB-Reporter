@@ -55,7 +55,7 @@ load_reported_ips() {
         done < "$REPORTED_IPS_FILE"
         log "INFO" "Loaded ${#reported_ips[@]} IPs from $REPORTED_IPS_FILE"
     else
-        log "INFO" "$REPORTED_IPS_FILE does not exist. No data to load!"
+        log "INFO" "$REPORTED_IPS_FILE does not exist. No data to load."
     fi
 }
 
