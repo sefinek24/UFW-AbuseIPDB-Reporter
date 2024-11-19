@@ -55,10 +55,10 @@ download_file() {
 # Function to validate the API token format
 validate_token() {
     local token="$1"
-    if [[ ! "$token" =~ ^[a-f0-9]{80}$ ]]; then
-        return 1
-    else
+    if [[ "$token" =~ ^[a-f0-9]{80}$ ]]; then
         return 0
+    else
+        return 1
     fi
 }
 
@@ -175,7 +175,7 @@ while [[ $attempts -lt $max_attempts ]]; do
     fi
 done
 
-if [[ "$valid_token" == false ]]; then
+if [[ "$valid_token" == "false" ]]; then
     echo -e "\nFAIL: Maximum number of attempts reached. Installation aborted!"
     exit 1
 fi
