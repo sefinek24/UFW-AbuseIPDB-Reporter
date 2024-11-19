@@ -34,20 +34,20 @@ about the latest changes and more: https://discord.gg/53DBjTuzgZ
 
 EOF
 
-# Function to download a file using either wget or curl
+# Function to download a file using either curl or wget
 download_file() {
     local url="$1"
     local output="$2"
     local user_agent="UFW-AbuseIPDB-Reporter/$VERSION (+$REPO)"
 
-    if command -v wget >/dev/null 2>&1; then
-        echo "INFO: Using 'wget' to download the file..."
-        sudo wget --header="User-Agent: $user_agent" -O "$output" "$url"
-    elif command -v curl >/dev/null 2>&1; then
-        echo "INFO: 'wget' is not installed. Switching to 'curl' to download the file..."
+    if command -v curl >/dev/null 2>&1; then
+        echo "INFO: Using 'curl' to download the file..."
         sudo curl -A "$user_agent" -o "$output" "$url"
+    elif command -v wget >/dev/null 2>&1; then
+        echo "INFO: 'curl' is not installed. Using 'wget' to download the file..."
+        sudo wget --header="User-Agent: $user_agent" -O "$output" "$url"
     else
-        echo "FAIL: Neither 'wget' nor 'curl' is installed! Please install one of these packages and try running the script again."
+        echo "FAIL: Neither 'curl' nor 'wget' is installed! Please install one of these packages and try running the script again."
         exit 1
     fi
 }
@@ -141,8 +141,8 @@ echo
 
 
 # =========================== Prepare reporter.sh script ===========================
-GITHUB_URL="https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/reporter.sh..."
-echo "INFO: Downloading reporter.sh from $GITHUB_URL"
+GITHUB_URL="https://raw.githubusercontent.com/sefinek/UFW-AbuseIPDB-Reporter/main/reporter.sh"
+echo "INFO: Downloading reporter.sh from $GITHUB_URL..."
 if ! download_file "$GITHUB_URL" "$script_path"; then
     echo "FAIL: Something went wrong while downloading the file from GitHub servers! Maybe try running this script as sudo?"
     exit 1
@@ -176,7 +176,7 @@ while [[ $attempts -lt $max_attempts ]]; do
 done
 
 if [[ "$valid_token" = false ]]; then
-    echo "FAIL: Maximum number of attempts reached. Installation aborted!"
+    echo -e "\nFAIL: Maximum number of attempts reached. Installation aborted!"
     exit 1
 fi
 
