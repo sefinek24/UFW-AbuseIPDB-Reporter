@@ -205,8 +205,8 @@ ExecStart=$script_path
 Restart=always
 User=$(logname)
 WorkingDirectory=$install_dir
-StandardOutput=journal+console
-StandardError=journal+console
+StandardOutput=journal
+StandardError=journal
 
 [Install]
 WantedBy=multi-user.target
