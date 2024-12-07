@@ -27,7 +27,7 @@ See also this: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/
 ## 🧪 Tested operating systems
 - **Ubuntu Server:** 20.04 & 22.04
 
-If the distribution you're using to run this tool isn't listed here but works correctly, please create a new [Issue](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/issues) or submit a [Pull request](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/pulls).
+*If the distribution you're using to run this tool isn't listed here but works correctly, please create a new [Issue](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/issues) or submit a [Pull request](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/pulls).*
 
 
 ## 📥 Installation
