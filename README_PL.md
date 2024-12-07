@@ -27,7 +27,7 @@ Zobacz również to: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/se
 ## 🧪 Testowane systemy operacyjne
 - **Ubuntu Server:** 20.04 & 22.04
 
-Jeśli dystrybucja, której używasz do uruchomienia narzędzia, nie jest tutaj wymieniona, a skrypt działa poprawnie, utwórz nowy [Issue](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/issues). Dodam nazwę distra do listy.
+Jeśli dystrybucja, której używasz do uruchomienia tego narzędzia, nie jest wymieniona tutaj, ale działa poprawnie, utwórz nowy [Issue](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/issues) lub prześlij [Pull request](https://github.com/sefinek/UFW-AbuseIPDB-Reporter/pulls).
 
 
 ## 📥 Instalacja
