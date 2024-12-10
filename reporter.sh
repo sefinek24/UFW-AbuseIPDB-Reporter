@@ -74,7 +74,7 @@ is_local_ip() {
 report_to_abuseipdb() {
     local ip="$1" categories="$2" proto="$3" spt="$4" dpt="$5" ttl="$6" len="$7" tos="$8" timestamp="$9"
 
-    local comment="Blocked by UFW ($proto on port $dpt).
+    local comment="Blocked by UFW ($proto on $dpt)
 Source port: $spt"
 
     [[ -n "$ttl" ]] && comment+="

@@ -63,7 +63,7 @@ journalctl -u abuseipdb-ufw.service -f
 
 ### 📄 Example report
 ```
-Blocked by UFW (TCP on port 80).
+Blocked by UFW (TCP on 80)
 Source port: 28586
 TTL: 116
 Packet length: 48
