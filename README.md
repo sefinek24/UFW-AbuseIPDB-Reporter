@@ -1,8 +1,3 @@
-<div align="center">
-  [<a href="README.md">English</a>]
-  [<a href="README_PL.md">Polski</a>]
-</div>
-
 # 🛡️ UFW AbuseIPDB Reporter
 A utility designed to analyze UFW firewall logs and report malicious IP addresses to the [AbuseIPDB](https://www.abuseipdb.com) database.  
 To prevent redundant reporting of the same IP address within a short period, the tool uses a temporary cache file to track previously reported IPs.
