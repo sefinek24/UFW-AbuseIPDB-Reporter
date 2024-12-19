@@ -27,15 +27,15 @@ const processLogLine = async line => {
 	if (!line.includes('[UFW BLOCK]')) return log(1, `Ignoring line: ${line}`);
 
 	const match = {
-		timestamp: line.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[+-]\d{2}:\d{2})?/)[0],
-		srcIp: line.match(/SRC=([\d.]+)/)?.[1],
-		dstIp: line.match(/DST=([\d.]+)/)?.[1],
-		proto: line.match(/PROTO=(\S+)/)?.[1],
-		spt: line.match(/SPT=(\d+)/)?.[1],
-		dpt: line.match(/DPT=(\d+)/)?.[1],
-		ttl: line.match(/TTL=(\d+)/)?.[1],
-		len: line.match(/LEN=(\d+)/)?.[1],
-		tos: line.match(/TOS=(\S+)/)?.[1],
+		timestamp: line.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:[+-]\d{2}:\d{2})?/)?.[0] || null,
+		srcIp: line.match(/SRC=([\d.]+)/)?.[1] || null,
+		dstIp: line.match(/DST=([\d.]+)/)?.[1] || null,
+		proto: line.match(/PROTO=(\S+)/)?.[1] || null,
+		spt: line.match(/SPT=(\d+)/)?.[1] || null,
+		dpt: line.match(/DPT=(\d+)/)?.[1] || null,
+		ttl: line.match(/TTL=(\d+)/)?.[1] || null,
+		len: line.match(/LEN=(\d+)/)?.[1] || null,
+		tos: line.match(/TOS=(\S+)/)?.[1] || null,
 	};
 
 	const { srcIp, proto, dpt } = match;
