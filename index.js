@@ -5,6 +5,7 @@ const { reportedIps, loadReportedIps, saveReportedIps, isIpReportedRecently, mar
 const log = require('./utils/log.js');
 const axios = require('./services/axios.js');
 const config = require('./config.js');
+const { version } = require('./package.json');
 const { LOG_FILE, ABUSEIPDB_API_KEY } = config.MAIN;
 
 let fileOffset = 0;
@@ -105,7 +106,8 @@ const startMonitoring = () => {
 			});
 		});
 
-	log(0, `Now monitoring ${LOG_FILE}`);
+	log(0, `==================== Version ${version} ====================`);
+	log(0, `Ready! Now monitoring: ${LOG_FILE}`);
 };
 
 startMonitoring();
