@@ -10,13 +10,8 @@ See also this: [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/
 
 
 ## 📋 Requirements
-- **Operating System:** Linux with UFW firewall installed and configured.
-- **AbuseIPDB Account:** An account on the AbuseIPDB service [with a valid API token](https://www.abuseipdb.com/account/api). The API token is required.
-- **Installed packages:**
-  - `wget` or `curl`: One of these tools is required to download the [installation script](install.sh) from the GitHub repository and to send requests to the AbuseIPDB API.
-  - `jq`: A tool for processing and parsing JSON data returned by the AbuseIPDB API.
-  - `openssl`: Used to encode and decode the API token to secure authentication data.
-  - `tail`, `awk`, `grep`, `sed`: Standard Unix tools used for text processing and log analysis.
+- Node.js + npm
+- Git
 
 
 ## 🧪 Tested operating systems
