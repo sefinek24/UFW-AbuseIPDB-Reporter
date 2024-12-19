@@ -21,10 +21,10 @@ const loadReportedIps = () => {
 const saveReportedIps = () => fs.writeFileSync(CACHE_FILE, Array.from(reportedIps).map(([ip, time]) => `${ip} ${time}`).join('\n'), 'utf8');
 
 const isIpReportedRecently = ip => {
-	const now = Math.floor(Date.now() / 1000);
-	return reportedIps.has(ip) && (now - reportedIps.get(ip) < REPORT_INTERVAL);
+	const reportedTime = reportedIps.get(ip);
+	return reportedTime && (Date.now() / 1000 - reportedTime < REPORT_INTERVAL / 1000);
 };
 
 const markIpAsReported = ip => reportedIps.set(ip, Math.floor(Date.now() / 1000));
 
-module.exports = { loadReportedIps, saveReportedIps, isIpReportedRecently, markIpAsReported };
+module.exports = { reportedIps, loadReportedIps, saveReportedIps, isIpReportedRecently, markIpAsReported };

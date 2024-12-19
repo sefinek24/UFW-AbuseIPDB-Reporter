@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const chokidar = require('chokidar');
 const isLocalIP = require('./utils/isLocalIP.js');
-const { loadReportedIps, saveReportedIps, isIpReportedRecently, markIpAsReported } = require('./utils/cache.js');
+const { reportedIps, loadReportedIps, saveReportedIps, isIpReportedRecently, markIpAsReported } = require('./utils/cache.js');
 const log = require('./utils/log.js');
 const axios = require('./services/axios.js');
 const config = require('./config.js');
@@ -15,28 +15,12 @@ const reportToAbuseIpDb = async (ip, categories, comment) => {
 			headers: { 'Key': ABUSEIPDB_API_KEY },
 		});
 
-		log(0, `Successfully reported IP ${ip} (score: ${data.data.abuseConfidenceScore})`);
+		log(0, `Successfully reported IP ${ip} (abuse: ${data.data.abuseConfidenceScore}%)`);
 		return true;
 	} catch (err) {
 		log(2, `${err.message}\n${JSON.stringify(err.response.data)}`);
 		return false;
 	}
-};
-
-const determineCategories = (proto, dpt) => {
-	const categories = {
-		TCP: {
-			22: '14,22,18', 80: '14,21', 443: '14,21', 8080: '14,21',
-			25: '14,11', 21: '14,5,18', 53: '14,1,2', 23: '14,15,18',
-			3389: '14,15,18', 3306: '14,16', 6666: '14,8',
-			6667: '14,8', 6668: '14,8', 6669: '14,8', 9999: '14,6',
-		},
-		UDP: {
-			53: '14,1,2', 123: '14,17',
-		},
-	};
-
-	return categories[proto]?.[dpt] || '14';
 };
 
 const processLogLine = async line => {
@@ -66,11 +50,26 @@ const processLogLine = async line => {
 	}
 
 	if (isIpReportedRecently(srcIp)) {
-		log(0, `IP ${srcIp} reported recently`);
+		const lastReportedTime = reportedIps.get(srcIp);
+		const elapsedTime = Math.floor(Date.now() / 1000 - lastReportedTime);
+
+		const days = Math.floor(elapsedTime / 86400);
+		const hours = Math.floor((elapsedTime % 86400) / 3600);
+		const minutes = Math.floor((elapsedTime % 3600) / 60);
+		const seconds = elapsedTime % 60;
+
+		const timeAgo = [
+			days && `${days}d`,
+			hours && `${hours}h`,
+			minutes && `${minutes}m`,
+			(seconds || !days && !hours && !minutes) && `${seconds}s`,
+		].filter(Boolean).join(' ');
+
+		log(0, `IP ${srcIp} was last reported on ${new Date(lastReportedTime * 1000).toLocaleString()} (${timeAgo} ago)`);
 		return;
 	}
 
-	const categories = determineCategories(proto, dpt);
+	const categories = config.DETERMINE_CATEGORIES(proto, dpt);
 	const comment = config.REPORT_COMMENT(match.timestamp, srcIp, match.dstIp, proto, match.spt, dpt, match.ttl, match.len, match.tos);
 
 	log(0, `Reporting IP ${srcIp} (${proto} ${dpt}) with categories ${categories}`);
