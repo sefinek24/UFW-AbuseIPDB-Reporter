@@ -6,7 +6,7 @@ const log = require('./utils/log.js');
 const axios = require('./services/axios.js');
 const config = require('./config.js');
 const { version } = require('./package.json');
-const { LOG_FILE, ABUSEIPDB_API_KEY } = config.MAIN;
+const { LOG_FILE, ABUSEIPDB_API_KEY, SERVER_IDENTIFIER } = config.MAIN;
 
 let fileOffset = 0;
 
@@ -71,9 +71,9 @@ const processLogLine = async line => {
 	}
 
 	const categories = config.DETERMINE_CATEGORIES(proto, dpt);
-	const comment = config.REPORT_COMMENT(match.timestamp, srcIp, match.dstIp, proto, match.spt, dpt, match.ttl, match.len, match.tos);
+	const comment = config.REPORT_COMMENT(match.timestamp, srcIp, match.dstIp, proto, match.spt, dpt, match.ttl, match.len, match.tos, SERVER_IDENTIFIER);
 
-	log(0, `Reporting IP ${srcIp} (${proto} ${dpt}) with categories ${categories}`);
+	log(0, `Reporting IP ${srcIp} (${proto} ${dpt}) with categories: ${categories}`);
 
 	if (await reportToAbuseIpDb(srcIp, categories, comment)) {
 		markIpAsReported(srcIp);

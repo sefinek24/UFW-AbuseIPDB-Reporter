@@ -1,15 +1,19 @@
 exports.MAIN = {
+	// Server
 	LOG_FILE: '/var/log/ufw.log',
 	CACHE_FILE: '/tmp/ufw-abuseipdb-reporter.cache',
+	SERVER_IDENTIFIER: null,
 
+	// Reporting
 	ABUSEIPDB_API_KEY: '',
-	GITHUB_REPO: 'https://github.com/sefinek/UFW-AbuseIPDB-Reporter',
-
 	REPORT_INTERVAL: 12 * 60 * 60 * 1000, // 12h
+
+	// Project
+	GITHUB_REPO: 'https://github.com/sefinek/UFW-AbuseIPDB-Reporter',
 };
 
-exports.REPORT_COMMENT = (timestamp, srcIp, dstIp, proto, spt, dpt, ttl, len, tos) => {
-	return `Blocked by UFW (${proto} on ${dpt})
+exports.REPORT_COMMENT = (timestamp, srcIp, dstIp, proto, spt, dpt, ttl, len, tos, serverName) => {
+	return `Blocked by UFW ${serverName ? `on ${serverName} ` : ''}[${dpt}/${proto?.toLowerCase()}]
 Source port: ${spt}
 TTL: ${ttl || 'N/A'}
 Packet length: ${len || 'N/A'}
